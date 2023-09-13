@@ -20,6 +20,9 @@ def main():
         if inventory is not None:
             inventory.append(new_item)
         answer = input('Do you want to enter more items? y/n')
+        if answer.lower() != 'y' or answer.lower() != 'n':
+            print("Enter y or n")
+            answer = input('Do you want to enter more items? y/n')
 
     display_inventory(inventory)
     save_inventory(inventory)
